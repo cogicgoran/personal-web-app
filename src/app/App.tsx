@@ -1,16 +1,20 @@
-import styles from './App.module.css'
+import { Link, RouterProvider, createBrowserRouter } from 'react-router-dom'
+import Homepage from '../components/pages/homepage/Homepage'
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    Component: Homepage
+  }, 
+  {
+    path: "*",
+    Component: function (){return <div>Oops, not found <Link to="/">Homepage</Link></div>}
+  }
+])
 
 function App() {
   return (
-    <main className={styles.app}>
-    <h1>Cogic Goran</h1>
-    <h2>Software Developer</h2>
-    <nav>
-      <a href="/about">About</a>
-      <a href="/career">Career</a>
-      <a href="/technology">Technologies</a>
-    </nav>
-    </main>
+    <RouterProvider router={router} />
   )
 }
 
