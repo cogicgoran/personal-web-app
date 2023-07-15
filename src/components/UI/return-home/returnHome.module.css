@@ -1,0 +1,25 @@
+.returnHome {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+}
+
+.returnHome svg {
+    color: var(--green);
+    animation: test 2s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes test {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

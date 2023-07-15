@@ -1,0 +1,16 @@
+.about {
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 48px;
+    color: var(--green);
+}
+
+.about p {
+    font-size: 20px;
+    color: var(--gray);
+    margin: auto;
+    max-width: 80%;
+    margin-bottom: 16px;
+}

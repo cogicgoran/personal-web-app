@@ -1,24 +1,24 @@
-.app {
+.homepage {
     text-align: center;
 }
 
-.app h1 {
+.homepage h1 {
     font-size: 48px;
     color: #0FC960;
 }
 
-.app h2 {
+.homepage h2 {
     font-size: 24px;
     color: #0FC960;
 }
 
-.app nav {
+.homepage nav {
     display: flex;
     flex-direction: column;
     margin: 92px 0;
 }
 
-.app nav a {
+.homepage nav a {
     font-size: 14px;
     margin: 8px 0;
     display: block;
@@ -29,6 +29,6 @@
     transition: color 200ms;
 }
 
-.app nav a:hover {
+.homepage nav a:hover {
     color: #0FC960;
 }
