@@ -1,0 +1,25 @@
+name: deployment to server
+run-name: 🚀 ${{ github.event.head_commit.message }} deployment triggered by ${{ github.actor }} 🚀
+on:
+  push:
+    branches:
+    - main
+jobs:
+  deploy-stage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - run: echo "Preparing deploy-stage environment 🔧"
+      - name: Prepare ssh tunnel to the server for the deployment
+        uses: kielabokkie/ssh-key-and-known-hosts-action@v1
+        with:
+          ssh-private-key: ${{ secrets.SSH_GITHUB_ACTION }}
+          ssh-host: ${{ secrets.SERVER_IP }}
+      - name: Pull repository
+        run: ssh root@${{ secrets.SERVER_IP }} "git -C /app pull"
+      - name: Build application
+        run: ssh root@${{ secrets.SERVER_IP }} "npm --prefix /app install && npm --prefix /app run build"
+      - name: Restart server
+        run: ssh root@${{ secrets.SERVER_IP }} "rc-service app.service restart"
+      - name: CI/CD Completed
+        run: echo "🟢 Server restarted 🟢"
