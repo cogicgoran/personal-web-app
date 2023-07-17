@@ -1,0 +1,56 @@
+.career {
+    text-align: center;
+    color: white;
+}
+
+.career h1 {
+    margin: 24px 0;
+    font-size: 48px;
+    color: var(--green);
+}
+
+.cardHolder {
+    width: 80%;
+    margin: auto;
+}
+
+.card {
+    /* background-color: var(--gray); */
+    background-color: #101912;
+    /* #142d2b  Background */
+    padding: 16px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.card img {
+    display: block;
+    margin: auto;
+    height: 64px;
+}
+
+.expandable {
+    display: none;
+}
+
+.expandable.expanded {
+    display: flex;
+    flex-direction: column;
+}
+
+.expandableAction:focus {
+        outline: none;
+}
+
+.expandableAction svg {
+    transition: transform 500ms;
+    display: inline-block;
+    margin-left: 4px;
+    width: 18px;
+    height: 18px;
+}
+
+.expandedAction svg {
+    transform: rotateX(-180deg);
+}
+

@@ -3,6 +3,7 @@
 }
 
 .about h1 {
+    margin: 24px 0;
     font-size: 48px;
     color: var(--green);
 }

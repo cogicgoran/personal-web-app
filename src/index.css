@@ -1,9 +1,15 @@
 :root {
-  --gray:#A0939A;
-  --green: #0FC960;
-  --black:   #141D16;
+  --gray: #A0939A;
+  --green: #ef9745;
+  --black: #142d2b;
   background-color: var(--black);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
 }
 
 svg {
@@ -12,4 +18,13 @@ svg {
 
 a {
   text-decoration: none;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 1px auto;
 }
