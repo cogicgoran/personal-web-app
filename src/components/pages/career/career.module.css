@@ -6,7 +6,7 @@
 .career h1 {
     margin: 24px 0;
     font-size: 48px;
-    color: var(--green);
+    color: var(--main);
 }
 
 .cardHolder {
@@ -15,9 +15,7 @@
 }
 
 .card {
-    /* background-color: var(--gray); */
-    background-color: #101912;
-    /* #142d2b  Background */
+    background-color: var(--bg-100);
     padding: 16px;
     border-radius: 16px;
     margin-bottom: 16px;
