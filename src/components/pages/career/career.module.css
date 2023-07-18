@@ -1,20 +1,10 @@
-.career {
-    text-align: center;
-    color: white;
-}
-
-.career h1 {
-    margin: 24px 0;
-    font-size: 48px;
-    color: var(--main);
-}
-
 .cardHolder {
-    width: 80%;
+    text-align: center;
     margin: auto;
 }
 
 .card {
+    color: var(--text-light);
     background-color: var(--bg-100);
     padding: 16px;
     border-radius: 16px;
@@ -28,6 +18,7 @@
 }
 
 .expandable {
+    padding: 12px 0;
     display: none;
 }
 
@@ -36,14 +27,19 @@
     flex-direction: column;
 }
 
+.expandableAction {
+    border-radius: 16px;
+    padding: 4px 8px;
+}
+
 .expandableAction:focus {
-        outline: none;
+    outline: 1px solid var(--text-light);
 }
 
 .expandableAction svg {
     transition: transform 500ms;
     display: inline-block;
-    margin-left: 4px;
+    margin-left: 6px;
     width: 18px;
     height: 18px;
 }
