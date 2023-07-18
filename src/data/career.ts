@@ -1,4 +1,4 @@
-export interface CareerCardData {
+interface CareerCardData {
     id: string
     title: string
     subtitle: string

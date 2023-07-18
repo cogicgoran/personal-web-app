@@ -3,7 +3,7 @@
   --main: #ef9745;
   --bg-200: #142d2b;
   --bg-100:#101912;
-  --text-light: #eee;
+  --text-light: #ddd;
   background-color: var(--bg-200);
   font-family: Arial, Helvetica, sans-serif;
 }

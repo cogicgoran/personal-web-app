@@ -21,6 +21,7 @@ function Career() {
             <div className={styles.cardHolder}>
                 {careerData.map((careerJobData) => (
                     <CareerCard
+                        key={careerJobData.id}
                         {...careerJobData}
                         onViewToggle={toggleExtendedView}
                         activeExtendedView={activeExtendedView}
@@ -37,7 +38,7 @@ interface CareerCardProps {
     title: string
     subtitle: string
     imgSource: string
-    onViewToggle: Function
+    onViewToggle: (cardId: string) => void
     activeExtendedView: string
     responsibilities: Array<string>
 }
@@ -71,8 +72,8 @@ function CareerCard({
                     [styles.expanded]: activeExtendedView === id,
                 })}
             >
-                {responsibilities.map((responsibility) => (
-                    <span>{responsibility}</span>
+                {responsibilities.map((responsibility, index) => (
+                    <span key={index}>{responsibility}</span>
                 ))}
             </div>
         </div>

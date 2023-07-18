@@ -20,6 +20,12 @@
 .expandable {
     padding: 12px 0;
     display: none;
+    gap: 4px
+}
+
+.expandable span::before {
+    content: '-';
+    margin-right: 4px;
 }
 
 .expandable.expanded {
@@ -46,5 +52,13 @@
 
 .expandedAction svg {
     transform: rotateX(-180deg);
+}
+
+.expandable span:nth-child(odd) {
+    color: var(--main);
+}
+
+.expandable span:nth-child(event) {
+    color: var(--gray);
 }
 
